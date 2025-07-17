@@ -1,0 +1,1 @@
+If songs.db contains the top 100 songs of one listener from 2018, we can characterize their audio aura by analyzing the averages of energy, valence, and dance-ability allows for the characterization of the listener's audio aura. 
