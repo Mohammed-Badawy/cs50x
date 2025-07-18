@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+                let correct = document.querySelector('.correct');
+                let incorrect = document.querySelectorAll('.incorrect');
+
+                // check correct answer for Q1
+                correct.addEventListener('click', function(){
+                    // clear previous answers
+                    for (let i = 0; i < incorrect.length; i++){
+                        incorrect[i].style.backgroundColor = "";
+                    }
+                    
+                    // update correct answer
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#answer').innerHTML = "Correct!";
+                });
+
+                // Check incorrect answer Q1
+                for (let i = 0; i < incorrect.length; i++)
+                {
+                    
+                    incorrect[i].addEventListener('click', function(){
+                        correct.style.backgroundColor = "";
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('#answer').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                // Check Q2 answers
+                let check = document.querySelector('.check');
+                check.addEventListener('click', function(){
+                    let input = document.querySelector('#input');
+                    if (input.value === 'George Washington'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#answer2').innerHTML = 'Correct!';
+                    }else{
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#answer2').innerHTML = 'Incorrect!';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3>What's the capital of France?</h3>
+                 <button class = "incorrect"type="submit">Rome</button>
+                 <button class ="correct" type="submit">Paris</button>
+                 <button class = "incorrect"type="submit">Madrid</button>
+                 <button class = "incorrect"type="submit">Berlin</button>
+                 <button class = "incorrect"type="submit">New York</button>
+
+                 <p id="answer"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3>Who is known as the "Father of the United States"?</h3>
+                 <input type="text" id="input" autocomplete="off" autofocus>
+                 <button class="check" type="submit">Check Answer</button>
+
+                 <p id="answer2"></p>
+            </div>
+        </div>
+    </body>
+</html>
