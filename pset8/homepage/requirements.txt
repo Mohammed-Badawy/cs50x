@@ -1,0 +1,60 @@
+# html tags used
+<html>
+<head>
+<meta>
+<link>
+<title>
+<body>
+<header>
+<main>
+<footer>
+<section>
+<div>
+<h1>
+<h2>
+<h3>
+<p>
+<table>
+<thead>
+<th>
+<tr>
+<td>
+<a>
+<ul>
+<li>
+<nav>
+<img>
+<button>
+<form>
+<input>
+<label>
+
+
+# css selectors
+tags (body, li a)
+classes (.header, .footer, .hero, ....)
+
+ # css properties
+ align-items
+ display
+ flex
+ background-color
+ color
+ padding
+ margin
+ font-size
+ font-family
+ font-weight
+ gap
+ justify-content
+ flex-direction
+ list-style-type
+ text-decoration
+ box-sizing
+ list-style
+ border-radius
+ width
+
+ I used javascript to make the rubber duck logo blink at interval time.
+
+ I used bootstrap to style a table, headings and make a responsive web page using containers and other styling classes.
